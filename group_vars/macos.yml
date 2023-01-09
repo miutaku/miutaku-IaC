@@ -4,8 +4,9 @@ mac_brew_formula:
   - { name: ansible }
   - { name: fish }
   - { name: mas }
-  - { name: youtube-dl }
+  - { name: tree }
   - { name: wget }
+  - { name: youtube-dl }
 # brew cask package
 mac_brew_cask:
   - { name: appcleaner }
