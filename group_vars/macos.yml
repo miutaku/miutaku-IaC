@@ -1,0 +1,34 @@
+---
+# brew formula package
+mac_brew_formula:
+  - { name: ansible }
+  - { name: fish }
+  - { name: mas }
+  - { name: youtube-dl }
+# brew cask package
+mac_brew_cask:
+  - { name: appcleaner }
+  - { name: balenaetcher }
+  - { name: bitwarden }
+  - { name: brewlet }
+  - { name: discord }
+  - { name: duet }
+  - { name: funter }
+  - { name: google-chrome }
+  - { name: google-cloud-sdk }
+  - { name: google-drive }
+  - { name: google-japanese-ime }
+  - { name: hiddenbar }
+  - { name: iterm2 }
+  - { name: keyboardcleantool }
+  - { name: megasync }
+  - { name: miraktest }
+  - { name: raspberry-pi-imager }
+  - { name: skype }
+  - { name: slack }
+  - { name: tailscale }
+  - { name: teamviewer }
+  - { name: vivaldi }
+  - { name: vlc }
+  - { name: vmware-fusion }
+  - { name: zoom }

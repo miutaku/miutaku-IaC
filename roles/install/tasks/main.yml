@@ -1,0 +1,12 @@
+---
+- name: install for macos
+  include: debian.yml
+  when: "'debian' in group_names"
+
+- name: install for macos
+  include: rhel.yml
+  when: "'rhel' in group_names"
+
+- name: install for macos
+  include: macos.yml
+  when: "'macos' in group_names"

@@ -1,0 +1,13 @@
+---
+- name: install brew formula
+  homebrew:
+    name: "{{ item.name }}"
+    state: present
+  with_items: "{{ mac_brew_formula }}"
+
+- name: install brew cask
+  homebrew_cask:
+    name: "{{ item.name }}"
+    accept_external_apps: yes
+    state: present
+  with_items: "{{ mac_brew_cask }}"
