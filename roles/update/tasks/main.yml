@@ -2,22 +2,22 @@
 - name: apt updated
   apt:
     update_cache: yes
-  when: ansible_group is debian
+  when: "'debian' in group_names"
 
 - name: apt upgrade
   apt:
     name: "*"
     state: present
-  when: ansible_group is debian
+  when: "'debian' in group_names"
 
 - name: dnf update
   dnf:
     name: "*"
     state: present
-  when: ansible_group is rhel
+  when: "'rhel' in group_names"
 
 - name: brew update
   homebrew:
     update_homebrew: yes
     upgrade_all: yes
-  when: ansible_group is macos
+  when: "'macos' in group_names"
