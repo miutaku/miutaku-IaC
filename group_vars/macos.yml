@@ -5,6 +5,7 @@ mac_brew_formula:
   - { name: fish }
   - { name: mas }
   - { name: youtube-dl }
+  - { name: wget }
 # brew cask package
 mac_brew_cask:
   - { name: appcleaner }
@@ -32,3 +33,8 @@ mac_brew_cask:
   - { name: vlc }
   - { name: vmware-fusion }
   - { name: zoom }
+# Mac App Store(mas)
+mas_app:
+  - { name: Amphetamine, id: 937984704 }
+  - { name: LINE, id: 539883307 }
+  - { name: Twitter, id: 1482454543 }
