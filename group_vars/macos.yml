@@ -1,6 +1,7 @@
 ---
 # brew formula package
 mac_brew_formula:
+  - { name: android-platform-tools }
   - { name: ansible }
   - { name: fish }
   - { name: mas }
