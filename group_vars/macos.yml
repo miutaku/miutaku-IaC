@@ -5,6 +5,7 @@ mac_brew_formula:
   - { name: ansible }
   - { name: fish }
   - { name: mas }
+  - { name: sl }
   - { name: tree }
   - { name: wget }
   - { name: youtube-dl }
