@@ -24,6 +24,7 @@ mac_brew_cask:
   - { name: hiddenbar }
   - { name: iterm2 }
   - { name: keyboardcleantool }
+  - { name: macs-fan-control }
   - { name: megasync }
   - { name: miraktest }
   - { name: raspberry-pi-imager }
@@ -40,3 +41,5 @@ mas_app:
   - { name: Amphetamine, id: 937984704 }
   - { name: LINE, id: 539883307 }
   - { name: Twitter, id: 1482454543 }
+  - { name: Cloud Battery, id: 1481005137 }
+  - { name: virtualOS, id: 1614659226 }
