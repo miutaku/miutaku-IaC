@@ -6,7 +6,6 @@ mac_brew_formula:
   - { name: fish }
   - { name: mas }
   - { name: sl }
-  - { name: tor-browser }
   - { name: tree }
   - { name: wget }
   - { name: youtube-dl }
@@ -33,6 +32,7 @@ mac_brew_cask:
   - { name: skype }
   - { name: slack }
   - { name: tailscale }
+  - { name: tor-browser }
   - { name: teamviewer }
   - { name: vivaldi }
   - { name: vlc }
