@@ -6,7 +6,7 @@ mac_brew_formula:
   - { name: fish }
   - { name: mas }
   - { name: sl }
-  - { name: tor }
+  - { name: tor-browser }
   - { name: tree }
   - { name: wget }
   - { name: youtube-dl }
