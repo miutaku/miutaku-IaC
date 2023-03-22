@@ -9,6 +9,7 @@ mac_brew_formula:
   - { name: tree }
   - { name: wget }
   - { name: youtube-dl }
+  - { name: golang }
 # brew cask package
 mac_brew_cask:
   - { name: appcleaner }
@@ -32,6 +33,7 @@ mac_brew_cask:
   - { name: skype }
   - { name: slack }
   - { name: tailscale }
+  - { name: tor-browser }
   - { name: teamviewer }
   - { name: vivaldi }
   - { name: vlc }
