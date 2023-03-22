@@ -42,7 +42,7 @@
         dest: /tmp/
 
     - name: build vagrant-vmware-desktop
-      shell: 'cd /tmp/go_src/vagrant-vmware-utility/ && go build'
+      shell: 'cd /tmp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/ && go build'
 
     - name: mkdir /opt/vagrant-vmware-desktop
       file:
