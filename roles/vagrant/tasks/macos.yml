@@ -1,0 +1,60 @@
+---
+# vagrant
+
+- block:
+  - name: installed vagrant formula
+    homebrew:
+      name: "{{ item.name }}"
+      state: present
+    with_items:
+      - vagrant
+
+  - name: installed vagrant utility
+    homebrew_cask:
+      name: "{{ item.name }}"
+      accept_external_apps: yes
+      state: present
+    with_items:
+      - vagrant-vmware-utility
+
+  - name: installed vagrant plugin
+    shell: "vagrant plugin install {{ item.name }}"
+    with_items:
+      - vagrant-vmware-desktop
+
+
+# vagrant-vmware-desktop
+
+- name: checked setting up vagrant-vmware-desktop
+  stat:
+    path: "/opt/vagrant-vmware-desktop/certificates/{{ item.name }}"
+  with_items:
+    - vagrant-utility.client.crt
+    - vagrant-utility.client.key
+    - vagrant-utility.crt
+    - vagrant-utility.key
+  register: check_vagrant_util
+
+- block:
+    - name: cloned vagrant-vmware-desktop
+      git:
+        repo: https://github.com/hashicorp/vagrant-vmware-desktop.git
+        dest: /tmp/
+
+    - name: build vagrant-vmware-desktop
+      shell: 'cd /tmp/go_src/vagrant-vmware-utility/ && go build'
+
+    - name: mkdir /opt/vagrant-vmware-desktop
+      file:
+        path: /opt/vagrant-vmware-desktop
+        state: directory
+        owner: root
+        group: wheel
+        mode: 755
+
+    - name: set vagrant-vmware-desktop
+      copy:
+        src: /tmp/vagrant-vmware-desktop/go_src/vagrant-vmware-utility/certificates/
+        dest: /opt/vagrant-vmware-desktop/certificates/
+
+    when: not check_vagrant_util.stat.exists
