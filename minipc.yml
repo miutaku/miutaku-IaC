@@ -1,0 +1,7 @@
+---
+- name: setup for minipc
+  hosts: minipc
+  remote_user: miutaku
+  roles:
+    - { name: initialize, tags: initialize }
+    - { name: node_exporter, tags: node_exporter }
