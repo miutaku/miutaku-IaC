@@ -1,0 +1,8 @@
+---
+- name: setup for macos devices
+  hosts: macos
+  remote_user: miutaku
+  roles:
+    - { name: initialize, tags: initialize }
+    - { name: install, tags: install }
+    - { name: update, tags: update }

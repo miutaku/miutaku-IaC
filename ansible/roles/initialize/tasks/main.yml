@@ -1,0 +1,12 @@
+---
+- name: initialize for debian
+  include: debian.yml
+  when: "'debian' in group_names"
+
+- name: initialize for rhel
+  include: rhel.yml
+  when: "'rhel' in group_names"
+
+- name: initialize for macos
+  include: macos.yml
+  when: "'macos' in group_names"

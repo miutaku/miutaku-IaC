@@ -1,0 +1,5 @@
+---
+- name: update all package
+  apt:
+    upgrade: True
+    update: True

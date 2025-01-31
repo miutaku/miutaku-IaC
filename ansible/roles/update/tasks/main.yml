@@ -1,0 +1,18 @@
+---
+- name: apt updated
+  apt:
+    update_cache: True
+    upgrade: True
+  when: "'debian' in group_names"
+
+- name: dnf update
+  dnf:
+    name: "*"
+    state: present
+  when: "'rhel' in group_names"
+
+- name: brew update
+  homebrew:
+    update_homebrew: True
+    upgrade_all: True
+  when: "'macos' in group_names"

@@ -1,0 +1,48 @@
+---
+# brew formula package
+mac_brew_formula:
+  - { name: android-platform-tools }
+  - { name: ansible }
+  - { name: fish }
+  - { name: mas }
+  - { name: sl }
+  - { name: tree }
+  - { name: wget }
+  - { name: youtube-dl }
+  - { name: golang }
+# brew cask package
+mac_brew_cask:
+  - { name: appcleaner }
+  - { name: balenaetcher }
+  - { name: bitwarden }
+  - { name: brewlet }
+  - { name: discord }
+  - { name: duet }
+  - { name: funter }
+  - { name: google-chrome }
+  - { name: google-cloud-sdk }
+  - { name: google-drive }
+  - { name: google-japanese-ime }
+  - { name: hiddenbar }
+  - { name: iterm2 }
+  - { name: keyboardcleantool }
+  - { name: macs-fan-control }
+  - { name: megasync }
+  - { name: miraktest }
+  - { name: raspberry-pi-imager }
+  - { name: skype }
+  - { name: slack }
+  - { name: tailscale }
+  - { name: tor-browser }
+  - { name: teamviewer }
+  - { name: vivaldi }
+  - { name: vlc }
+  - { name: vmware-fusion }
+  - { name: zoom }
+# Mac App Store(mas)
+mas_app:
+  - { name: Amphetamine, id: 937984704 }
+  - { name: LINE, id: 539883307 }
+  - { name: Twitter, id: 1482454543 }
+  - { name: Cloud Battery, id: 1481005137 }
+  - { name: virtualOS, id: 1614659226 }

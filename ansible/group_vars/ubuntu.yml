@@ -1,0 +1,6 @@
+---
+ubiquiti:
+  gpg:
+    - { src: "https://dl.ui.com/unifi/unifi-repo.gpg", dest: "/etc/apt/trusted.gpg.d/unifi-repo.gpg", mode: "0644" }
+  repo: "deb [signed-by={{ ubiquiti.gpg.dest }}] https://www.ui.com/downloads/unifi/debian stable ubiquiti"
+  pkg_list: "/etc/apt/sources.list.d/100-ubnt-unifi.list"

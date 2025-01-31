@@ -1,0 +1,8 @@
+[ubuntu]
+x86-64-instance-ubuntu22-04-lts
+
+[rocky]
+
+[oci:children]
+ubuntu
+rocky
