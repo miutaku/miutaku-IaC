@@ -1,9 +1,0 @@
-[macbook]
-miutakumacbook-pro
-
-[macdesktop]
-#miutakumac-mini
-
-[macos:children]
-macbook
-macdesktop
