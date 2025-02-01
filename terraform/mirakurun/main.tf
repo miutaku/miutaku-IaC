@@ -9,7 +9,7 @@ resource "proxmox_vm_qemu" "vm" {
   ## boot
   bios        = "seabios"
   boot        = "order=scsi0"
-  target_node = "pve-nucbox-3"
+  target_node = "pve-prodesk"
   clone       = "mirakurun-docker-ubuntu-24-04-home-amd64"
   full_clone  = false
 
