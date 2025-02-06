@@ -1,6 +1,6 @@
 resource "proxmox_vm_qemu" "vm" {
   # options
-  vmid        = 20000  # 追加
+  vmid        = 20000
   protection  = true
   name        = var.vm_name
   agent       = 1 # qemu-guest-agent
