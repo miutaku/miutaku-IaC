@@ -1,5 +1,6 @@
 resource "proxmox_vm_qemu" "vm" {
   # options
+  vmid        = 20000  # 追加
   protection  = true
   name        = var.vm_name
   agent       = 1 # qemu-guest-agent
@@ -30,7 +31,7 @@ resource "proxmox_vm_qemu" "vm" {
     model  = "virtio"
     bridge = "vmbr0"
     firewall = false
-    macaddr = "BC:24:11:DB:B0:F6"
+    macaddr = "bc:24:11:db:b0:f6"
   }
 
   # disk
