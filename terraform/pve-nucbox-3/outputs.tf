@@ -11,3 +11,10 @@ output "container_vm_name" {
 output "container_vm_id" {
   value = proxmox_vm_qemu.container.id
 }
+
+output "tuner_vm_name" {
+  value = proxmox_vm_qemu.tuner.name
+}
+output "tuner_vm_id" {
+  value = proxmox_vm_qemu.tuner.id
+}

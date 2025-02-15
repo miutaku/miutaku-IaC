@@ -15,3 +15,9 @@ variable "container_vm_name" {
     type        = string
     default     = "container-docker-ubuntu-24-04-home-amd64"
 }
+
+variable "tuner_vm_name" {
+    description = "The name of the mirakurun virtual machine"
+    type        = string
+    default     = "mirakurun-docker-ubuntu-24-04-home-amd64"
+}
