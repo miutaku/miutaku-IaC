@@ -116,9 +116,11 @@ resource "proxmox_vm_qemu" "tuner" {
   name        = var.tuner_vm_name
   agent       = 1 # qemu-guest-agent
   automatic_reboot = true
+  onboot      = true
 
   # hardware
   ## boot
+  scsihw      = "virtio-scsi-single"
   bios        = "seabios"
   boot        = "order=scsi0"
   target_node = "pve-prodesk"
@@ -150,9 +152,11 @@ resource "proxmox_vm_qemu" "tuner" {
         scsi0 {
             disk {
                 backup = true
-                emulatessd = true
+                emulatessd = false
                 size = "20G"
                 storage = "local"
+                iothread = true
+                replicate = true
             }
         }
     }
