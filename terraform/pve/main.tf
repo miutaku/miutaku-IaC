@@ -160,9 +160,16 @@ resource "proxmox_vm_qemu" "tuner" {
   # PCI device
   pcis {
     pci0 {
-        raw {
-            raw_id = "0000:01:00.0"
-        }
+      mapping {
+        mapping_id = "tuner_earthsoft"
+        pcie = false
+        primary_gpu = false
+        rombar = false
+        device_id = "0xee8d"
+        vendor_id = "0x0368"
+        sub_device_id = ""
+        sub_vendor_id = ""
+      }
     }
   }
 
