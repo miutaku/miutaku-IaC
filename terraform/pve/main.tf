@@ -129,7 +129,7 @@ resource "proxmox_vm_qemu" "tuner" {
   vcpus = 0 # this is set automatically by Proxmox to sockets * cores. https://registry.terraform.io/providers/Telmate/proxmox/latest/docs/resources/vm_qemu
   cores = 1
   sockets = 1
-  cpu_type = "x86-64-v2-AES"
+  cpu_type = "host"
 
   ## memory
   memory = 5120
