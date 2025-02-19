@@ -81,7 +81,7 @@ resource "proxmox_vm_qemu" "container" {
   cpu_type = "x86-64-v2-AES"
 
   ## memory
-  memory = 1024
+  memory = 2048
   balloon = 0
 
   # network
