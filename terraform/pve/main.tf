@@ -134,7 +134,7 @@ resource "proxmox_vm_qemu" "tuner" {
   cpu_type = "host"
 
   ## memory
-  memory = 5120
+  memory = 9216
   balloon = 0
 
   # network
