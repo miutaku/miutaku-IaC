@@ -11,7 +11,7 @@ resource "proxmox_vm_qemu" "rke2_server" {
   ## boot
   bios        = "seabios"
   boot        = "order=scsi0"
-  target_node = "pve-prodesk"
+  target_node = "pve-nucbox-3"
   clone       = "ubuntu-24-04-home-amd64"
   full_clone  = false
 
@@ -32,7 +32,7 @@ resource "proxmox_vm_qemu" "rke2_server" {
     model  = "virtio"
     bridge = "vmbr0"
     firewall = false
-    macaddr = "BC:24:11:97:96:BB"
+    macaddr = "bc:24:11:97:96:bb"
   }
   # disk
   disks {
