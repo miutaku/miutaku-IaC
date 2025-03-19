@@ -11,7 +11,7 @@ resource "proxmox_vm_qemu" "rke2_worker" {
   protection  = true
   name        = each.key
   agent       = 1 # qemu-guest-agent
-  onboot     = true
+  onboot     = false
   automatic_reboot = true
 
   # hardware
