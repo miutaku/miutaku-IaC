@@ -264,16 +264,26 @@ resource "proxmox_vm_qemu" "tuner" {
   # disk
   disks {
     scsi {
-        scsi0 {
-            disk {
-                backup = true
-                emulatessd = false
-                size = "20G"
-                storage = "local"
-                iothread = true
-                replicate = true
-            }
+      scsi0 {
+        disk {
+          backup = true
+          emulatessd = false
+          size = "15G"
+          storage = "local"
+          iothread = true
+          replicate = true
         }
+      }
+      scsi1 { # mirakurun db
+        disk {
+          backup = true
+          emulatessd = false
+          size = "2G"
+          storage = "OCI-OMV"
+          iothread = true
+          replicate = true
+        }
+      }
     }
   }
   # PCI device
