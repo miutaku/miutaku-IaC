@@ -122,8 +122,6 @@ resource "proxmox_vm_qemu" "mm_kiosk" {
   bios        = "seabios"
   boot        = "order=scsi0"
   target_node = "pve-nucbox-3"
-  clone       = "rocky-9-home-amd64"
-  full_clone  = false
 
   ## cpu
   vcpus = 0 # this is set automatically by Proxmox to sockets * cores. https://registry.terraform.io/providers/Telmate/proxmox/latest/docs/resources/vm_qemu
@@ -151,8 +149,8 @@ resource "proxmox_vm_qemu" "mm_kiosk" {
             disk {
                 backup = true
                 emulatessd = true
-                size = "25G"
-                storage = "int-ssd"
+                size = "11G"
+                storage = "mm-kiosk-optane"
             }
         }
     }
