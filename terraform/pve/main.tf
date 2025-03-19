@@ -268,7 +268,7 @@ resource "proxmox_vm_qemu" "tuner" {
         disk {
           backup = true
           emulatessd = false
-          size = "15G"
+          size = "20G"
           storage = "local"
           format = "qcow2"
           iothread = true
