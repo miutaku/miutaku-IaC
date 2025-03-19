@@ -296,8 +296,6 @@ resource "proxmox_vm_qemu" "tuner" {
         pcie = false
         primary_gpu = false
         rombar = false
-        device_id = "0xee8d"
-        vendor_id = "0x0368"
         sub_device_id = ""
         sub_vendor_id = ""
       }
