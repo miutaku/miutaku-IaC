@@ -270,6 +270,7 @@ resource "proxmox_vm_qemu" "tuner" {
           emulatessd = false
           size = "15G"
           storage = "local"
+          format = "qcow2"
           iothread = true
           replicate = true
         }
@@ -280,6 +281,7 @@ resource "proxmox_vm_qemu" "tuner" {
           emulatessd = false
           size = "2G"
           storage = "OCI-OMV"
+          format = "qcow2"
           iothread = true
           replicate = true
         }
