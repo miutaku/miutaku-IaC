@@ -2,7 +2,7 @@ resource "proxmox_vm_qemu" "rke2_server" {
   # options
   vmid        = 40000
   protection  = true
-  name        = master-rke2-server-ubuntu-24-04-home-amd64
+  name        = "master-rke2-server-ubuntu-24-04-home-amd64"
   agent       = 1 # qemu-guest-agent
   onboot      = false
   automatic_reboot = true
@@ -112,7 +112,7 @@ resource "proxmox_vm_qemu" "mm_kiosk" {
   # options
   vmid        = 10000
   protection  = true
-  name        = var.mm_kiosk_vm_name
+  name        = "mm-kiosk-gnome-rocky-9-home-amd64"
   agent       = 1 # qemu-guest-agent
   onboot      = false
   automatic_reboot = true
