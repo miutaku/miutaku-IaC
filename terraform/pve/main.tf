@@ -275,17 +275,6 @@ resource "proxmox_vm_qemu" "tuner" {
           replicate = true
         }
       }
-      scsi1 { # mirakurun db
-        disk {
-          backup = true
-          emulatessd = false
-          size = "2G"
-          storage = "OCI-OMV"
-          format = "qcow2"
-          iothread = true
-          replicate = true
-        }
-      }
     }
   }
   # PCI device
